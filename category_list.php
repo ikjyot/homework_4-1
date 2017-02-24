@@ -30,11 +30,11 @@ $statement->closeCursor();
         </tr>
 	<?php foreach($categories as $category):?>
 	<tr>
-	  <td><?php echo $category[categoryName]; ?></td>
+	  <td><?php echo $category['categoryName']; ?></td>
 	  <td>
 	    <form action = "delete_category.php" method='post'>
 	      <input type="hidden" name="categoryName" value="<?php echo
-	    $categories[categoryName]; ?>">
+	    $category['categoryName']; ?>">
 	      <input type="submit" value="Delete">	  
 	    </form>
 	  </td>
