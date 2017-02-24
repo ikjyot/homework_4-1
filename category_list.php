@@ -32,7 +32,7 @@ $statement->closeCursor();
 	<tr>
 	  <td><?php echo $category[categoryName]; ?></td>
 	  <td>
-	    <form action = "delete_category.php" method='POST'>
+	    <form action = "delete_category.php" method='post'>
 	      <input type="hidden" name="categoryName" value="<?php echo
 	    $categories[categoryName]; ?>">
 	      <input type="submit" value="Delete">	  
@@ -49,6 +49,11 @@ $statement->closeCursor();
 
 
     <h2>Add Category</h2>
+    <form action="add_category.php" method="post" id="add_category">
+      <label>Category Name: </label>
+      <input type="text" name="categoryName"><br>
+      <input type="submit" value="Add"><br>
+    </form>
 
     <!-- add code for the form here -->
 
